@@ -13,8 +13,10 @@ import org.firstinspires.ftc.robotcore.external.navigation.AxesOrder;
 import org.firstinspires.ftc.robotcore.external.navigation.AxesReference;
 import org.firstinspires.ftc.robotcore.external.navigation.Orientation;
 
-@Autonomous(name="BlueTrayLineWall", group="chad")
-public class  BlueTrayWall extends LinearOpMode {
+
+
+@Autonomous(name="RedTrayLineWall", group="chad")
+public class RedTrayWall extends LinearOpMode {
         //
         DcMotor frontleft;
         DcMotor frontright;
@@ -60,14 +62,20 @@ arm.trayRelease();
         backleft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         backright.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     moveToPosition(-16.0,0.4);
-    strafeToPosition(18.0, 0.4);
+    strafeToPosition(-18.0, 0.4);
     moveToPosition(-4.0,0.4);
     turnWithGyro(0,.9);
     arm.trayGrab();
-    sleep(500);
+        sleep(500);
+       /* try {
+                sleep(500);
+        } catch (InterruptedException e) {
+                e.printStackTrace();
+        }
+*/
     moveToPosition(20.0,0.3);
         arm.trayRelease();
-        strafeToPosition(-38.0, 0.4);
+        strafeToPosition(36.0, 0.4);
         }
 //
     /*
