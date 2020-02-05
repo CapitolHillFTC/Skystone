@@ -55,9 +55,14 @@ arm.trayRelease();
 
         waitForStartify();
         //
+        frontleft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        frontright.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        backleft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+        backright.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
     moveToPosition(-16.0,0.4);
     strafeToPosition(22.0, 0.4);
     moveToPosition(-4.0,0.4);
+    turnWithGyro(0,.9);
     arm.trayGrab();
 
     moveToPosition(20.0,0.3);
